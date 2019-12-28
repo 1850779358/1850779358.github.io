@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+    <meta charset="utf-8">
+    <title>黑咕咕个人博客</title> 
+    <link href="/public/images/favicon.ico" rel="icon" type="image/x-ico">
+    <link rel="stylesheet" type="text/css" href="/public/css/heiGuang.css">
+	<link rel="stylesheet"  media="screen and (max-width: 992px)"  type="text/css" href="/public/css/heiGuang.css">
+    <link rel="stylesheet" href="/public/lib/fontawesome-free-5.11.2-web/css/all.css">
+	<link rel="stylesheet" href="/public/lib/fontawesome-free-5.11.2-web/css/v4-shims.css">
+    <script src="/public/js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="/public/js/heiGuang.js"></script>
+</head>
+<body>
+	<div class="loading">
+        <!-- <div class="pic">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+        </div> -->
+        <!-- <div class="loader2"></div> -->
+        <div class="loader1">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+    </div>
+    <script src="/public/js/jquery-1.11.3.js"></script>
+    <script>
+        document.onreadystatechange = function(){
+            if(document.readyState == "complete"){
+                $(".loading").fadeOut();
+            }
+        }
+    </script>
+    <div class="back-to-top">
+		<i class="fas fa-arrow-up"></i>
+		<span id="scrollpercent"><span>0</span>%</span>
+	</div>
+	<div class="progress">
+    </div>
+	<script src="/public/js/jquery-1.11.3.js"></script>
+    <script>
+    	window.onscroll = function(){
+    		var scrollNow = window.pageYOffset;
+		    var pageClientHeight = document.documentElement.clientHeight;
+		    
+		    var scrollHeight = Math.max(
+		        document.body.scrollHeight, document.documentElement.scrollHeight,
+		        document.body.offsetHeight, document.documentElement.offsetHeight,
+		        document.body.clientHeight, document.documentElement.clientHeight
+		    ) - pageClientHeight; // Full Window Height minus the viewport height
+		    
+		    var fullWindowHeightInPercentage = Math.round(
+		        (scrollNow / scrollHeight) * 100 
+		    );
+
+		    if (fullWindowHeightInPercentage >= 2) {
+		    	$(".back-to-top").css('display', 'block');
+		    	$("#scrollpercent span").html(fullWindowHeightInPercentage);
+		    }else{
+		    	$(".back-to-top").css('display', 'none');		       
+    		}
+		}
+    </script>
+	<center>
+		<div class="center">
+			<!--  -->
+			<div class="center-box">
+				<!-- 导航栏 -->
+				<div class="header-inner">
+					<div class="site-meta">
+						<div class="meta">
+							<p>前端开发</p>
+							<p>从没入门到放弃</p>
+						</div>
+					</div>
+					<div class="site-nav">
+						<ul>
+							<li class="on"><a href="/index.html"><i class="fas fa-home"></i> 首页</a></li>
+							<li><a href="/about"><i class="fas fa-user"></i>  关于</a></li>
+							<li><a href=""><i class="fas fa-tags"></i> 标签</a></li>
+							<li><a href=""><i class="fas fa-th"></i> 分类</a></li>
+							<li><a href="/archive"><i class="fas fa-archive"></i> 归档</a></li>
+						</ul>
+					</div>
+					<div class="site-item">
+						<div class="my-item">
+							<div class="my-synopsis">
+								<p>前端开发，从没入门到放弃</p>
+							</div>
+							<div class="my-img">
+								
+							</div>
+						</div>
+						<!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=200 height=50 src="https://music.163.com/outchain/player?type=2&id=412902950&auto=0&height=32"></iframe> -->
+						<div class="site-state">
+							<div class="state-posts">
+								<a href="">
+									<span class="state-count">4</span>
+									<span class="state-name">日志</span>
+								</a>
+							</div>
+							<div class="state-categories">
+								<a href="">
+									<span class="state-count">1</span>
+									<span class="state-name">分类</span>
+								</a>
+							</div>
+							<div class="state-tags">
+								<a href="">
+									<span class="state-count">1</span>
+									<span class="state-name">标签</span>
+								</a>
+							</div>
+						</div>
+						<div class="contact">
+							<ul>
+								<li title="1850779358"><i class="fab fa-qq"></i></li>
+								<li title="1850779358@qq.com"><i class="fas fa-envelope"></i></li>
+								<li title="全剧终"><i class="fab fa-weixin"></i></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+				<label for="sidebar-checkbox" class="sidebar-toggle">
+			        <span></span>
+			    </label>
+				<!-- 导航栏结束 -->
+				<div class="content-wrap">
+					<div class="center-header">
+						<img id="img1" src="/public/images/timg1.jpg">
+						<img id="img2" src="/public/images/timg2.jpg">
+						<img id="img3" src="/public/images/timg3.jpg">
+						<img id="img4" src="/public/images/timg4.jpg">
+						<img id="img5" src="/public/images/timg5.jpg">
+						<ul id="dots">
+							<li></li>
+						    <li></li>
+						    <li></li>
+						    <li></li>
+						    <li></li>
+						</ul>
+						<div class="btn-left" style="font-size: 50px"><i class="fas fa-angle-left"></i></div>
+						<div class="btn-right" style="font-size: 50px"><i class="fas fa-angle-right"></i></div>
+					</div>
+					<script type="text/javascript" src="/public/js/jquery-1.11.3.js"></script>
+					<script type="text/javascript" src="/public/js/run.js"></script>
+					<div class="center-item">
+						
+<div class="item-header">
+	<a href="/novel/2019/12/27/baiyexing.html">白夜行</a>
+	<div class="item-i"> 
+		<span>
+			<i class="fas fa-calendar-alt"></i>
+			<span>发表于</span>
+			<time>2019-12-27</time>
+		</span>
+		
+		<span>
+			<span>|</span>
+			<i class="fas fa-folder"></i>
+			<span>分类于</span>
+			<a class='folder'>novel</a>
+		</span>
+		
+		<span>
+			<span>|</span>
+			<i class="fas fa-comment"></i>
+		</span>
+	</div>
+</div>
+<div class="item-main">
+	<p>巨大的圣诞树已倒下，旁边就是桐原亮司。他整个人呈大字形，一动不动。有一名警察靠近，想拉他起来，但随即停止动作，回头望向笹垣。</p>
+
+<p>“怎么了？”笹垣问。对方没有回答。笹垣走近，想让桐原的脸部朝上。这时，尖叫声再度响起。有东西扎在桐原胸口，由于鲜血涌出难以辨识，但笹垣一看便知。那是桐原视若珍宝的剪刀，那把改变他人生的剪刀！</p>
+
+<p>“快送医院！”有人喊道，奔跑的脚步声再度传来。笹垣明白这些都是徒劳，他早已看惯尸体了。忽觉周围有人，笹垣抬起头来。雪穗就站在身边，如雪般白皙的脸庞正俯向桐原。</p>
+
+<p>“这人……是谁？”笹垣看着她的眼睛。雪穗像人偶般面无表情。她冰冷地回答：“我不知道。雇用临时工都由店长全权负责。”</p>
+
+<p>话音未落，一个年轻女子便从旁出现。她脸色铁青，用微弱的声音说：“我是店长滨本。”</p>
+
+<p>警察们开始采取行动。有人采取保护现场的措施，有人准备对店长展开侦讯，还有人搭着笹垣的肩，请他离开尸体。笹垣脚步蹒跚地走出警察的圈子。只见雪穗正沿扶梯上楼，背影犹如白色的幽灵。</p>
+
+<p>她一次都没有回头。</p>
+
+
+	<p>...</p>
+</div>
+<div class="item-img">
+	<img src="/public/images/baiyexing.jpg">
+</div>
+<div class="item-button text-center">
+	<a class="btn" href="/novel/2019/12/27/baiyexing.html" rel="contents">
+		阅读全文 »
+	</a>
+</div>
+<footer class="item-footer">
+	<div class="item-eof"></div>
+</footer>
+
+<div class="item-header">
+	<a href="/novel/2019/12/27/xanyiren.html">嫌疑人X的献身</a>
+	<div class="item-i"> 
+		<span>
+			<i class="fas fa-calendar-alt"></i>
+			<span>发表于</span>
+			<time>2019-12-27</time>
+		</span>
+		
+		<span>
+			<span>|</span>
+			<i class="fas fa-folder"></i>
+			<span>分类于</span>
+			<a class='folder'>novel</a>
+		</span>
+		
+		<span>
+			<span>|</span>
+			<i class="fas fa-comment"></i>
+		</span>
+	</div>
+</div>
+<div class="item-main">
+	<p>怎么回事？”草薙问岸谷。</p>
+
+<p>“这个……是她主动联络说有话要说，所以，就在刚才……听到了惊人内幕……”</p>
+
+<p>“就你一个人听到吗？”</p>
+
+<p>“不，组长也在。”</p>
+
+<p>草薙看着石神。他的脸色灰败如土，那双眼睛盯着靖子，充满血丝。</p>
+
+<p>“为什么，在这种地方……”他低语。</p>
+
+<p>靖子如遭冻结纹风不动的脸孔，眼看着逐渐崩溃，两眼溢出清泪。她走到石神面前，突然伏身跪倒。</p>
+
+<p>“对不起，真的很对不起。让您为了我们……为了我这种女人……”她的背部激烈晃动着。</p>
+
+<p>“你胡说什么！你在说什么……傻话……你胡说……”石神口中发出像念咒一样的呢喃声。</p>
+
+<p>“怎么能只有我们得到幸福……那是不可能的。我也该赎罪，我要接受惩罚，我要和石神先生一起接受惩罚。我能做的也只有这个，我能为您做的只有这个。对不起！对不起！”靖子两手撑地，头抵着地板。</p>
+
+<p>石神边摇头往后退，那张脸痛苦地扭曲着。</p>
+
+<p>他猛然一个转身，用双手抱住头。</p>
+
+<p>喔喔喔——他发出野兽般的咆哮，那同时也是夹杂了绝望与混乱的哀嚎。那个叫声令听者无不为之动容。</p>
+
+<p>警员跑过来，想要制止他。</p>
+
+<p>“别碰他！”汤川挡在他们的面前，“至少，让他哭个够……”</p>
+
+<p>汤川从石神身后，将手放在他的两肩上。</p>
+
+<p>石神继续嘶吼着，草薙觉得他仿佛正呕出灵魂。</p>
+
+	<p>...</p>
+</div>
+<div class="item-img">
+	<img src="/public/images/xianyiren.jpg">
+</div>
+<div class="item-button text-center">
+	<a class="btn" href="/novel/2019/12/27/xanyiren.html" rel="contents">
+		阅读全文 »
+	</a>
+</div>
+<footer class="item-footer">
+	<div class="item-eof"></div>
+</footer>
+
+					</div>
+					<nav class="pagination">
+						
+						
+						
+						<a class="page-number current" href="">1</a>
+						
+						
+						
+						<a class="page-number" href="/page2">2</a>
+						
+						
+						
+						<a class="extend next" rel="next" href="/page2"><i class="fas fa-angle-right"></i></a>
+						
+					</nav>
+				</div>
+			</div>
+			<!--  -->
+			<div class="footer">
+				<div class="footer-inner">
+					<div class="copyright">
+						<span>©</span>
+						<span>2019</span>
+						<span><i class="fas fa-user"></i></span>
+						<span>黑咕咕</span>
+					</div>
+					<div class="showDays">本站已运行 0 年 0 天 0 小时 0 分钟 0 秒</div>
+				</div>
+			</div>
+			<script type="text/javascript" src="/public/js/jquery-1.11.3.js"></script>
+			<script type="text/javascript" src="/public/js/time.js"></script>
+		</div>
+	</center>
+</body>
+</html>

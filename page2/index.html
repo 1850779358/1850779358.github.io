@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+    <meta charset="utf-8">
+    <title>黑咕咕个人博客</title> 
+    <link href="/public/images/favicon.ico" rel="icon" type="image/x-ico">
+    <link rel="stylesheet" type="text/css" href="/public/css/heiGuang.css">
+	<link rel="stylesheet"  media="screen and (max-width: 992px)"  type="text/css" href="/public/css/heiGuang.css">
+    <link rel="stylesheet" href="/public/lib/fontawesome-free-5.11.2-web/css/all.css">
+	<link rel="stylesheet" href="/public/lib/fontawesome-free-5.11.2-web/css/v4-shims.css">
+    <script src="/public/js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="/public/js/heiGuang.js"></script>
+</head>
+<body>
+	<div class="loading">
+        <!-- <div class="pic">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+        </div> -->
+        <!-- <div class="loader2"></div> -->
+        <div class="loader1">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+    </div>
+    <script src="/public/js/jquery-1.11.3.js"></script>
+    <script>
+        document.onreadystatechange = function(){
+            if(document.readyState == "complete"){
+                $(".loading").fadeOut();
+            }
+        }
+    </script>
+    <div class="back-to-top">
+		<i class="fas fa-arrow-up"></i>
+		<span id="scrollpercent"><span>0</span>%</span>
+	</div>
+	<div class="progress">
+    </div>
+	<script src="/public/js/jquery-1.11.3.js"></script>
+    <script>
+    	window.onscroll = function(){
+    		var scrollNow = window.pageYOffset;
+		    var pageClientHeight = document.documentElement.clientHeight;
+		    
+		    var scrollHeight = Math.max(
+		        document.body.scrollHeight, document.documentElement.scrollHeight,
+		        document.body.offsetHeight, document.documentElement.offsetHeight,
+		        document.body.clientHeight, document.documentElement.clientHeight
+		    ) - pageClientHeight; // Full Window Height minus the viewport height
+		    
+		    var fullWindowHeightInPercentage = Math.round(
+		        (scrollNow / scrollHeight) * 100 
+		    );
+
+		    if (fullWindowHeightInPercentage >= 2) {
+		    	$(".back-to-top").css('display', 'block');
+		    	$("#scrollpercent span").html(fullWindowHeightInPercentage);
+		    }else{
+		    	$(".back-to-top").css('display', 'none');		       
+    		}
+		}
+    </script>
+	<center>
+		<div class="center">
+			<!--  -->
+			<div class="center-box">
+				<!-- 导航栏 -->
+				<div class="header-inner">
+					<div class="site-meta">
+						<div class="meta">
+							<p>前端开发</p>
+							<p>从没入门到放弃</p>
+						</div>
+					</div>
+					<div class="site-nav">
+						<ul>
+							<li class="on"><a href="/index.html"><i class="fas fa-home"></i> 首页</a></li>
+							<li><a href="/about"><i class="fas fa-user"></i>  关于</a></li>
+							<li><a href=""><i class="fas fa-tags"></i> 标签</a></li>
+							<li><a href=""><i class="fas fa-th"></i> 分类</a></li>
+							<li><a href="/archive"><i class="fas fa-archive"></i> 归档</a></li>
+						</ul>
+					</div>
+					<div class="site-item">
+						<div class="my-item">
+							<div class="my-synopsis">
+								<p>前端开发，从没入门到放弃</p>
+							</div>
+							<div class="my-img">
+								
+							</div>
+						</div>
+						<!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=200 height=50 src="https://music.163.com/outchain/player?type=2&id=412902950&auto=0&height=32"></iframe> -->
+						<div class="site-state">
+							<div class="state-posts">
+								<a href="">
+									<span class="state-count">4</span>
+									<span class="state-name">日志</span>
+								</a>
+							</div>
+							<div class="state-categories">
+								<a href="">
+									<span class="state-count">1</span>
+									<span class="state-name">分类</span>
+								</a>
+							</div>
+							<div class="state-tags">
+								<a href="">
+									<span class="state-count">1</span>
+									<span class="state-name">标签</span>
+								</a>
+							</div>
+						</div>
+						<div class="contact">
+							<ul>
+								<li title="1850779358"><i class="fab fa-qq"></i></li>
+								<li title="1850779358@qq.com"><i class="fas fa-envelope"></i></li>
+								<li title="全剧终"><i class="fab fa-weixin"></i></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+				<label for="sidebar-checkbox" class="sidebar-toggle">
+			        <span></span>
+			    </label>
+				<!-- 导航栏结束 -->
+				<div class="content-wrap">
+					<div class="center-header">
+						<img id="img1" src="/public/images/timg1.jpg">
+						<img id="img2" src="/public/images/timg2.jpg">
+						<img id="img3" src="/public/images/timg3.jpg">
+						<img id="img4" src="/public/images/timg4.jpg">
+						<img id="img5" src="/public/images/timg5.jpg">
+						<ul id="dots">
+							<li></li>
+						    <li></li>
+						    <li></li>
+						    <li></li>
+						    <li></li>
+						</ul>
+						<div class="btn-left" style="font-size: 50px"><i class="fas fa-angle-left"></i></div>
+						<div class="btn-right" style="font-size: 50px"><i class="fas fa-angle-right"></i></div>
+					</div>
+					<script type="text/javascript" src="/public/js/jquery-1.11.3.js"></script>
+					<script type="text/javascript" src="/public/js/run.js"></script>
+					<div class="center-item">
+						
+<div class="item-header">
+	<a href="/novel/2019/12/27/liuxingzhiban.html">流星之绊</a>
+	<div class="item-i"> 
+		<span>
+			<i class="fas fa-calendar-alt"></i>
+			<span>发表于</span>
+			<time>2019-12-27</time>
+		</span>
+		
+		<span>
+			<span>|</span>
+			<i class="fas fa-folder"></i>
+			<span>分类于</span>
+			<a class='folder'>novel</a>
+		</span>
+		
+		<span>
+			<span>|</span>
+			<i class="fas fa-comment"></i>
+		</span>
+	</div>
+</div>
+<div class="item-main">
+	<p>“我们三人就像流星，毫无目标地飞逝，不知将在何处燃烧殆尽。但不论何时，都会有一根纽带将我们紧密相连：一定要手刃凶手！”　　</p>
+
+<p>横须贺，雨，夜幕低垂。　　</p>
+
+<p>为看英仙座流星雨，年幼的三兄妹深夜偷偷外出，孰料父母竟惨死家中。他们的童年随之被剥夺，人生轨迹也彻底偏离常规。</p>
+
+<p>以流星之名，三兄妹立誓寻到凶手。　　</p>
+
+<p>境遇多舛的三兄妹以欺诈为生，潜走于城市的灰色地带，悲伤的回忆、酸楚的噩梦始终如影随形。14年弹指一挥间，案件追诉时效将尽，他们的苦苦寻找忽然有了惊人的发现。然而，他们赌上一切的精心计划，却横遭痛彻骨髓的命运抉择。</p>
+
+	<p>...</p>
+</div>
+<div class="item-img">
+	<img src="/public/images/liuxing.jpg">
+</div>
+<div class="item-button text-center">
+	<a class="btn" href="/novel/2019/12/27/liuxingzhiban.html" rel="contents">
+		阅读全文 »
+	</a>
+</div>
+<footer class="item-footer">
+	<div class="item-eof"></div>
+</footer>
+
+<div class="item-header">
+	<a href="/novel/2019/12/27/eyi.html">恶意</a>
+	<div class="item-i"> 
+		<span>
+			<i class="fas fa-calendar-alt"></i>
+			<span>发表于</span>
+			<time>2019-12-27</time>
+		</span>
+		
+		<span>
+			<span>|</span>
+			<i class="fas fa-folder"></i>
+			<span>分类于</span>
+			<a class='folder'>novel</a>
+		</span>
+		
+		<span>
+			<span>|</span>
+			<i class="fas fa-comment"></i>
+		</span>
+	</div>
+</div>
+<div class="item-main">
+	<p>在你心里深藏着对日高的恶意，这仇恨深得连你自己都无法解释，而它正是造成这次事件的缘由。</p>
+
+<p>这股恶意到底从何而起呢？我非常仔细地调查你们二人的过去，然而发现没有任何理由足以让你怨恨日高。他是个非常好的少年，又是你的恩人。你和藤尾正哉曾经联手欺负他，他却反过来救了你。</p>
+
+<p>但我知道这样的恩德反而招致了怨恨。因为在他面前，你不可能没有自卑感。</p>
+
+<p>然后你长大成人了，又不得不陷进忌妒日高的泥淖。这世上你最不想输给他的人，竟然率先一步成为作家。我试着想象你获知他夺得新人奖时的心境，不禁全身汗毛都竖立起来。</p>
+
+<p>即使如此，你还是去拜访了日高，因为你一心想成为作家。你相信和日高保持联系将助你早日实现梦想，于是，你暂时镇封住心底隐藏的恶意。</p>
+
+<p>然而，你的人生是那么坎坷。是运气不好，还是才能不够？我不得而知。总之你不但没能成功，还得了癌症。</p>
+
+<p>我相信你心里的封印是在意识到死亡的那一刻解开的，你无法忍受就这么抱着对日高的恶意离开人世，而引燃这股恶意的，是日高握有你过去的秘密这一事实。</p>
+
+<p>以上是我所想的事实真相，你有没有什么话要说？</p>
+
+<p>既然你沉默不语，我可以将它解释成默认吗？</p>
+
+<p>好像说得太久了，连我的口也干了。</p>
+
+<p>啊，对了，我再补充一点。</p>
+
+<p>从你和你母亲过去的言行，我感到你们好像对日高以及当时的邻居存有某种偏见。</p>
+
+<p>但我敢说，不论如何丑恶的偏见，它的产生绝对不是历史和地域的错。</p>
+
+<p>青少年时期，你之所以讨厌日高，理由之一恐怕是你母亲不自觉流露出的那份轻蔑，我想这有必要澄清一下。</p>
+
+<p>最后，我衷心祝你手术成功。不管怎样，我都希望你能够活下来。</p>
+
+<p>因为法庭正等着你。</p>
+
+	<p>...</p>
+</div>
+<div class="item-img">
+	<img src="/public/images/eyi.jpg">
+</div>
+<div class="item-button text-center">
+	<a class="btn" href="/novel/2019/12/27/eyi.html" rel="contents">
+		阅读全文 »
+	</a>
+</div>
+<footer class="item-footer">
+	<div class="item-eof"></div>
+</footer>
+
+					</div>
+					<nav class="pagination">
+						
+						<a class="extend next" rel="next" href="/"><i class="fas fa-angle-left"></i></a>
+						
+						
+						
+						<a class="page-number" href="/index">1</a>
+						
+						
+						
+						<a class="page-number current" href="">2</a>
+						
+						
+						
+					</nav>
+				</div>
+			</div>
+			<!--  -->
+			<div class="footer">
+				<div class="footer-inner">
+					<div class="copyright">
+						<span>©</span>
+						<span>2019</span>
+						<span><i class="fas fa-user"></i></span>
+						<span>黑咕咕</span>
+					</div>
+					<div class="showDays">本站已运行 0 年 0 天 0 小时 0 分钟 0 秒</div>
+				</div>
+			</div>
+			<script type="text/javascript" src="/public/js/jquery-1.11.3.js"></script>
+			<script type="text/javascript" src="/public/js/time.js"></script>
+		</div>
+	</center>
+</body>
+</html>

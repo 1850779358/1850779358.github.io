@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+    <meta charset="utf-8">
+    <title>白夜行 | 黑咕咕个人博客</title> 
+    <link href="/public/images/favicon.ico" rel="icon" type="image/x-ico">
+    <link rel="stylesheet" type="text/css" href="/public/css/heiGuang.css">
+    <link rel="stylesheet" href="/public/lib/fontawesome-free-5.11.2-web/css/all.css">
+	<link rel="stylesheet" href="/public/lib/fontawesome-free-5.11.2-web/css/v4-shims.css">
+    <script src="/public/js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="/public/js/heiGuang.js"></script>
+    <script type="text/javascript" src="/public/js/run.js"></script>
+</head>
+<body>
+	<div class="loading">
+        <!-- <div class="pic">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+        </div> -->
+        <!-- <div class="loader2"></div> -->
+        <div class="loader1">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+    </div>
+    <script src="/public/js/jquery-1.11.3.js"></script>
+    <script>
+        document.onreadystatechange = function(){
+            if(document.readyState == "complete"){
+                $(".loading").fadeOut();
+            }
+        }
+    </script>
+    <div class="back-to-top">
+		<i class="fas fa-arrow-up"></i>
+		<span id="scrollpercent"><span>0</span>%</span>
+	</div>
+	<div class="progress-bar">
+    </div>
+	<script src="/public/js/jquery-1.11.3.js"></script>
+    <script>
+    	window.onscroll = function(){
+    		var scrollNow = window.pageYOffset;
+		    var pageClientHeight = document.documentElement.clientHeight;
+		    
+		    var scrollHeight = Math.max(
+		        document.body.scrollHeight, document.documentElement.scrollHeight,
+		        document.body.offsetHeight, document.documentElement.offsetHeight,
+		        document.body.clientHeight, document.documentElement.clientHeight
+		    ) - pageClientHeight; // Full Window Height minus the viewport height
+		    
+		    var fullWindowHeightInPercentage = Math.round(
+		        (scrollNow / scrollHeight) * 100 
+		    );
+		    $(".progress-bar").css('width', fullWindowHeightInPercentage + '%') ;
+		    if (fullWindowHeightInPercentage >= 2) {
+		    	$(".back-to-top").css('display', 'block');
+		    	$("#scrollpercent span").html(fullWindowHeightInPercentage);
+		    }else{
+		    	$(".back-to-top").css('display', 'none');		       
+    		}
+		}
+    </script>
+	<center>
+		<div class="center">
+			<!--  -->
+			<div class="center-box">
+				<div class="header-inner">
+					<div class="site-meta">
+						<div class="meta">
+							<p>前端开发</p>
+							<p>从没入门到放弃</p>
+						</div>
+					</div>
+					<div class="post-site-nav">
+						<ul>
+							<li><a href="/index.html"><i class="fas fa-home"></i> 首页</a></li>
+							<li><a href="/about"><i class="fas fa-user"></i>  关于</a></li>
+							<li><a href=""><i class="fas fa-tags"></i> 标签</a></li>
+							<li><a href=""><i class="fas fa-th"></i> 分类</a></li>
+							<li><a href="/archive"><i class="fas fa-archive"></i> 归档</a></li>
+						</ul>
+					</div>
+					<div class="site-item">
+						<div class="my-item">
+							<div class="my-synopsis">
+								<p>前端开发，从没入门到放弃</p>
+							</div>
+							<div class="my-img">
+								
+							</div>
+						</div>
+						<!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=200 height=50 src="https://music.163.com/outchain/player?type=2&id=412902950&auto=0&height=32"></iframe> -->
+						<div class="site-state">
+							<div class="state-posts">
+								<a href="">
+									<span class="state-count">4</span>
+									<span class="state-name">日志</span>
+								</a>
+							</div>
+							<div class="state-categories">
+								<a href="">
+									<span class="state-count">1</span>
+									<span class="state-name">分类</span>
+								</a>
+							</div>
+							<div class="state-tags">
+								<a href="">
+									<span class="state-count">1</span>
+									<span class="state-name">标签</span>
+								</a>
+							</div>
+						</div>
+						<div class="contact">
+							<ul>
+								<li title="1850779358"><i class="fab fa-qq"></i></li>
+								<li title="1850779358@qq.com"><i class="fas fa-envelope"></i></li>
+								<li title="全剧终"><i class="fab fa-weixin"></i></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<script type="text/javascript">
+				</script>
+				<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+				<label for="sidebar-checkbox" class="sidebar-toggle">
+			        <span></span>
+			    </label>
+				<div class="post-wrap">
+					<div class="post-item">
+						<div class="post-item-header">
+							<h1>白夜行</h1>
+							<div class="post-item-i"> 
+								<span>
+									<i class="fas fa-calendar-alt"></i>
+									<span>发表于</span>
+									<time>2019/12/27</time>
+								</span>
+								
+								<span>
+									<span>|</span>
+									<i class="fas fa-folder"></i>
+									<span>分类于</span>
+									<a class='folder'>novel</a>
+								</span>
+								
+								<span>
+									<span>|</span>
+									<i class="fas fa-comment"></i>
+								</span>
+							</div>
+						</div>
+						<div class="post-item-main">
+							<p>巨大的圣诞树已倒下，旁边就是桐原亮司。他整个人呈大字形，一动不动。有一名警察靠近，想拉他起来，但随即停止动作，回头望向笹垣。</p>
+
+<p>“怎么了？”笹垣问。对方没有回答。笹垣走近，想让桐原的脸部朝上。这时，尖叫声再度响起。有东西扎在桐原胸口，由于鲜血涌出难以辨识，但笹垣一看便知。那是桐原视若珍宝的剪刀，那把改变他人生的剪刀！</p>
+
+<p>“快送医院！”有人喊道，奔跑的脚步声再度传来。笹垣明白这些都是徒劳，他早已看惯尸体了。忽觉周围有人，笹垣抬起头来。雪穗就站在身边，如雪般白皙的脸庞正俯向桐原。</p>
+
+<p>“这人……是谁？”笹垣看着她的眼睛。雪穗像人偶般面无表情。她冰冷地回答：“我不知道。雇用临时工都由店长全权负责。”</p>
+
+<p>话音未落，一个年轻女子便从旁出现。她脸色铁青，用微弱的声音说：“我是店长滨本。”</p>
+
+<p>警察们开始采取行动。有人采取保护现场的措施，有人准备对店长展开侦讯，还有人搭着笹垣的肩，请他离开尸体。笹垣脚步蹒跚地走出警察的圈子。只见雪穗正沿扶梯上楼，背影犹如白色的幽灵。</p>
+
+<p>她一次都没有回头。</p>
+
+<!--more-->
+
+<p><br />
+“我的天空里没有太阳，总是黑夜，但并不暗，因为有东西代替了太阳。虽然没有太阳那么明亮，但对我来说已经足够。凭借着这份光，我便能把黑夜当成白天。我从来就没有太阳，所以不怕失去。	”</p>
+
+<p>雪穗所说的暗夜中的太阳应该就是亮司，她唯一信任并深深了解自己的人。</p>
+
+<p>亮司的存在还能让她感到自己是个有感情的人，因为在她心灵没完全扭曲之前，她和亮司之间还是存在真挚的情感的。当亮司躺在血泊中时，她人偶般的面无表情正是想掩饰内心几近崩溃的表现。</p>
+
+<p>在她杀掉生母和养母时，在她暗中遣亮司袭击好友和继女时，她都以完美的演技表现出自己的无辜和善良。但是，独独是对亮司她无法再表演下去了，她能做到的只有用没有表情的面孔来掩饰自己的震惊和悲伤。当她矢口否认认识亮司转身离去时，像个幽灵一样的背影泄露了她脆弱的心灵。她绝不能回头，因为努力控制好的感情会随着回眸的一瞥而彻底失控。</p>
+
+<p>躺在那里的亮司，是雪穗童年的玩伴，是雪穗情窦初开的男孩儿，是雪穗最信任的同伴，是雪穗黑夜中的太阳。亮司终于通过死亡挣脱了夜的束缚，而他的逝去却让雪穗从此只能在黑暗的夜里徘徊。</p>
+
+<p>如果说《X的献身》是寓言，《秘密》是童话，那么《白夜行》就是呈现人生活剧的史诗，为什么所有向光明世界的努力，却塑造了这样残忍黑暗的你我？</p>
+
+
+							<div class="item-img">
+								<img src="/public/images/baiyexing.jpg">
+							</div>
+						</div>
+						<div>
+							<ul class="post-copyright">
+								<li class="post-copyright-author"><strong>本文作者：</strong>黑咕咕</li>
+								<li class="post-copyright-link"><strong>本文链接：</strong><a href="/novel/2019/12/27/baiyexing.html">http://127.0.0.1:4000/novel/2019/12/27/baiyexing.html</a></li>
+								<li class="post-copyright-license"><strong>转载声明：</strong>本博客所有文章除特别声明外，均采用 
+									<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+								</li>
+							</ul>
+						</div>
+						<footer class="post-footer">
+							<div class="post-tags">							
+								
+								
+								
+								<a href="">
+									<i class="fas fa-tag"></i>
+									东野圭吾
+								</a>
+								
+								
+								
+								
+								
+							</div>
+							<div class="post-nav">
+								<div class="post-nav-next post-nav-item">
+									
+								</div>
+								<span class="post-nav-divider"></span>
+								<div class="post-nav-prev post-nav-item">
+									
+									<a href="/novel/2019/12/27/xanyiren.html">
+										嫌疑人X的献身
+										<i class="fas fa-chevron-right"></i>	
+									</a>
+									
+								</div>
+							</div>
+						</footer>
+					</div>
+				</div>
+			</div>
+			<!--  -->
+			<div class="footer">
+				<div class="footer-inner">
+					<div class="copyright">
+						<span>©</span>
+						<span>2019</span>
+						<span><i class="fas fa-user"></i></span>
+						<span>黑咕咕</span>
+					</div>
+					<div class="showDays">本站已运行 0 年 0 天 0 小时 0 分钟 0 秒</div>
+				</div>
+			</div>
+			<script type="text/javascript" src="/public/js/jquery-1.11.3.js"></script>
+			<script type="text/javascript" src="/public/js/time.js"></script>
+		</div>
+	</center>
+</body>
+</html>

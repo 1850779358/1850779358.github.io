@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+    <meta charset="utf-8">
+    <title>恶意 | 黑咕咕个人博客</title> 
+    <link href="/public/images/favicon.ico" rel="icon" type="image/x-ico">
+    <link rel="stylesheet" type="text/css" href="/public/css/heiGuang.css">
+    <link rel="stylesheet" href="/public/lib/fontawesome-free-5.11.2-web/css/all.css">
+	<link rel="stylesheet" href="/public/lib/fontawesome-free-5.11.2-web/css/v4-shims.css">
+    <script src="/public/js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="/public/js/heiGuang.js"></script>
+    <script type="text/javascript" src="/public/js/run.js"></script>
+</head>
+<body>
+	<div class="loading">
+        <!-- <div class="pic">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+        </div> -->
+        <!-- <div class="loader2"></div> -->
+        <div class="loader1">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+    </div>
+    <script src="/public/js/jquery-1.11.3.js"></script>
+    <script>
+        document.onreadystatechange = function(){
+            if(document.readyState == "complete"){
+                $(".loading").fadeOut();
+            }
+        }
+    </script>
+    <div class="back-to-top">
+		<i class="fas fa-arrow-up"></i>
+		<span id="scrollpercent"><span>0</span>%</span>
+	</div>
+	<div class="progress-bar">
+    </div>
+	<script src="/public/js/jquery-1.11.3.js"></script>
+    <script>
+    	window.onscroll = function(){
+    		var scrollNow = window.pageYOffset;
+		    var pageClientHeight = document.documentElement.clientHeight;
+		    
+		    var scrollHeight = Math.max(
+		        document.body.scrollHeight, document.documentElement.scrollHeight,
+		        document.body.offsetHeight, document.documentElement.offsetHeight,
+		        document.body.clientHeight, document.documentElement.clientHeight
+		    ) - pageClientHeight; // Full Window Height minus the viewport height
+		    
+		    var fullWindowHeightInPercentage = Math.round(
+		        (scrollNow / scrollHeight) * 100 
+		    );
+		    $(".progress-bar").css('width', fullWindowHeightInPercentage + '%') ;
+		    if (fullWindowHeightInPercentage >= 2) {
+		    	$(".back-to-top").css('display', 'block');
+		    	$("#scrollpercent span").html(fullWindowHeightInPercentage);
+		    }else{
+		    	$(".back-to-top").css('display', 'none');		       
+    		}
+		}
+    </script>
+	<center>
+		<div class="center">
+			<!--  -->
+			<div class="center-box">
+				<div class="header-inner">
+					<div class="site-meta">
+						<div class="meta">
+							<p>前端开发</p>
+							<p>从没入门到放弃</p>
+						</div>
+					</div>
+					<div class="post-site-nav">
+						<ul>
+							<li><a href="/index.html"><i class="fas fa-home"></i> 首页</a></li>
+							<li><a href="/about"><i class="fas fa-user"></i>  关于</a></li>
+							<li><a href=""><i class="fas fa-tags"></i> 标签</a></li>
+							<li><a href=""><i class="fas fa-th"></i> 分类</a></li>
+							<li><a href="/archive"><i class="fas fa-archive"></i> 归档</a></li>
+						</ul>
+					</div>
+					<div class="site-item">
+						<div class="my-item">
+							<div class="my-synopsis">
+								<p>前端开发，从没入门到放弃</p>
+							</div>
+							<div class="my-img">
+								
+							</div>
+						</div>
+						<!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=200 height=50 src="https://music.163.com/outchain/player?type=2&id=412902950&auto=0&height=32"></iframe> -->
+						<div class="site-state">
+							<div class="state-posts">
+								<a href="">
+									<span class="state-count">4</span>
+									<span class="state-name">日志</span>
+								</a>
+							</div>
+							<div class="state-categories">
+								<a href="">
+									<span class="state-count">1</span>
+									<span class="state-name">分类</span>
+								</a>
+							</div>
+							<div class="state-tags">
+								<a href="">
+									<span class="state-count">1</span>
+									<span class="state-name">标签</span>
+								</a>
+							</div>
+						</div>
+						<div class="contact">
+							<ul>
+								<li title="1850779358"><i class="fab fa-qq"></i></li>
+								<li title="1850779358@qq.com"><i class="fas fa-envelope"></i></li>
+								<li title="全剧终"><i class="fab fa-weixin"></i></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<script type="text/javascript">
+				</script>
+				<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+				<label for="sidebar-checkbox" class="sidebar-toggle">
+			        <span></span>
+			    </label>
+				<div class="post-wrap">
+					<div class="post-item">
+						<div class="post-item-header">
+							<h1>恶意</h1>
+							<div class="post-item-i"> 
+								<span>
+									<i class="fas fa-calendar-alt"></i>
+									<span>发表于</span>
+									<time>2019/12/27</time>
+								</span>
+								
+								<span>
+									<span>|</span>
+									<i class="fas fa-folder"></i>
+									<span>分类于</span>
+									<a class='folder'>novel</a>
+								</span>
+								
+								<span>
+									<span>|</span>
+									<i class="fas fa-comment"></i>
+								</span>
+							</div>
+						</div>
+						<div class="post-item-main">
+							<p>在你心里深藏着对日高的恶意，这仇恨深得连你自己都无法解释，而它正是造成这次事件的缘由。</p>
+
+<p>这股恶意到底从何而起呢？我非常仔细地调查你们二人的过去，然而发现没有任何理由足以让你怨恨日高。他是个非常好的少年，又是你的恩人。你和藤尾正哉曾经联手欺负他，他却反过来救了你。</p>
+
+<p>但我知道这样的恩德反而招致了怨恨。因为在他面前，你不可能没有自卑感。</p>
+
+<p>然后你长大成人了，又不得不陷进忌妒日高的泥淖。这世上你最不想输给他的人，竟然率先一步成为作家。我试着想象你获知他夺得新人奖时的心境，不禁全身汗毛都竖立起来。</p>
+
+<p>即使如此，你还是去拜访了日高，因为你一心想成为作家。你相信和日高保持联系将助你早日实现梦想，于是，你暂时镇封住心底隐藏的恶意。</p>
+
+<p>然而，你的人生是那么坎坷。是运气不好，还是才能不够？我不得而知。总之你不但没能成功，还得了癌症。</p>
+
+<p>我相信你心里的封印是在意识到死亡的那一刻解开的，你无法忍受就这么抱着对日高的恶意离开人世，而引燃这股恶意的，是日高握有你过去的秘密这一事实。</p>
+
+<p>以上是我所想的事实真相，你有没有什么话要说？</p>
+
+<p>既然你沉默不语，我可以将它解释成默认吗？</p>
+
+<p>好像说得太久了，连我的口也干了。</p>
+
+<p>啊，对了，我再补充一点。</p>
+
+<p>从你和你母亲过去的言行，我感到你们好像对日高以及当时的邻居存有某种偏见。</p>
+
+<p>但我敢说，不论如何丑恶的偏见，它的产生绝对不是历史和地域的错。</p>
+
+<p>青少年时期，你之所以讨厌日高，理由之一恐怕是你母亲不自觉流露出的那份轻蔑，我想这有必要澄清一下。</p>
+
+<p>最后，我衷心祝你手术成功。不管怎样，我都希望你能够活下来。</p>
+
+<p>因为法庭正等着你。
+<!--more--></p>
+
+<p><br /></p>
+
+<p>《恶意》是一部很特别的悬疑小说，它探求的是犯罪的动机，而不是通常意义上的找寻凶手。</p>
+
+<p>而在寻求犯罪动机的过程中，我们一步步建立起来的，看似合情合理的构想，又一步一步的被一些，看似不起眼的线索，摧毁的一无所有，然后重新在心里构建新的“大厦”。</p>
+
+<p>在《白夜行》里，亮司为了喜欢的姑娘，不惜完全毁灭了自己，而《恶意》中的野野口修，只是出于根本说不清道不明，不知从何而起，却也无法终止的恶意，精心设计了一场谋杀。更让人可怕的，不是他所杀害的人是一直帮助他的朋友日高邦彦，而是，野野口修穷尽最后的岁月也要玷污日高的整个人生。甚至，杀害他，都只不过是一个开始步骤。</p>
+
+<p>野野口修亲手杀害了自己国小、国中的同学，一直帮助他的朋友日高邦彦。这一谋杀案的解决并没有花费侦探加贺恭一郎很多的时间，当加贺发现野野口在关于案件的记录中有几处故意为之的错疏之地时，野野口很坦然地承认了自己的罪责。</p>
+
+<p>但是野野口一直不愿意提及他的作案动机，在加贺的努力下，事实被一点点揭开，各种微小的证据，都在此时证明着，其实，野野口才是“受害者”。</p>
+
+<p>一个伪善的，可怕的，甚至有些变态的日高形象浮现出来。他将野野口的作品据为己有，还借此成为了一个畅销作家。他拍下野野口想要刺杀自己的录像，收藏好留有野野口指纹的凶刀，野野口与日高邦彦的妻子初美产生了暧昧的关系，这一切都成为日高邦彦要挟野野口做自己的影子写手的条件。</p>
+
+<p>野野口为了维护初美，接受了这一切，并将它们视之为命运的安排，最后，二人竟然演变成了亲密的伙伴关系。可惜最后，初美却因为车祸而死，野野口并不认为这是一场纯粹的意外，因为那个雨夜，货车司机说，初美是忽然出现在路上的。也许，是被人推出人行道的。</p>
+
+<p>为了给心爱的女子报仇，为了自己应该享有的尊重和荣誉，野野口策划了这起谋杀。他之所以不愿意提及自己的杀人动机，完全是为了那位他曾经深爱的，已经离世的女子。而逮捕时，加贺才知道野野口已经身患绝症，时日不多，调查的过程见于各种报章，野野口成为了让人同情的杀人犯。人们开始同情野野口，都觉得日高的死根本就是咎由自取。</p>
+
+<p>但是，最让人惊恐的是，案件结束了，故事却并没有结束，当野野口虚伪的皮相被一层层地剥开，他蒙满尘垢的心灵被加贺托在手中，捧到了读者面前。</p>
+
+<p>原来这一切至始至终都是一场阴谋，没有婚外情，没有代笔，没有威胁，只有野野口一年多的精心策划和实施，他的看似费尽心机杀害日高，却只不过是表象。</p>
+
+<p>野野口真正想要谋杀的，是日高他的一生。他拍好录像带，藏好刀具，收好初美的照片，抄好日高写过的每一本书，他用了整整一年的时间，以一个创作者的想象力和营造力，缓慢而又孜孜不倦地进行着剧情的设计和完善。他甚至提前毒死了日高隔壁邻居的猫，只为了让大家相信，日高本就是一个视生命如草芥，残忍暴戾的人。根本没有什么苦大仇深的理由，仅仅是野野口内心的自卑和嫉妒衍生的恶意蔓延、吞噬了他的理性。</p>
+
+<p>自负与自卑的结合在野野口的心中产生了强大的扭力，不甘与嫉妒让他的心理最终变得畸形，恨意便如同生长在野野口身体里的癌细胞一样，最终让他迷失了自己。</p>
+
+<p>更可怕的是，对于野野口来说，这样的情绪已经超越了意识的存在。在他忙于恨一个人的时候，在他忙于拼尽全力毁掉日高的一切的时候，满腔的恶意填满了他，以至于他已经无暇去寻找那恶意的源头。</p>
+
+							<div class="item-img">
+								<img src="/public/images/eyi.jpg">
+							</div>
+						</div>
+						<div>
+							<ul class="post-copyright">
+								<li class="post-copyright-author"><strong>本文作者：</strong>黑咕咕</li>
+								<li class="post-copyright-link"><strong>本文链接：</strong><a href="/novel/2019/12/27/eyi.html">http://127.0.0.1:4000/novel/2019/12/27/eyi.html</a></li>
+								<li class="post-copyright-license"><strong>转载声明：</strong>本博客所有文章除特别声明外，均采用 
+									<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+								</li>
+							</ul>
+						</div>
+						<footer class="post-footer">
+							<div class="post-tags">							
+								
+								
+								
+								<a href="">
+									<i class="fas fa-tag"></i>
+									东野圭吾
+								</a>
+								
+								
+								
+								
+								
+							</div>
+							<div class="post-nav">
+								<div class="post-nav-next post-nav-item">
+									
+									<a href="/novel/2019/12/27/liuxingzhiban.html">
+										<i class="fas fa-chevron-left"></i>
+										流星之绊
+									</a>
+									
+								</div>
+								<span class="post-nav-divider"></span>
+								<div class="post-nav-prev post-nav-item">
+									
+								</div>
+							</div>
+						</footer>
+					</div>
+				</div>
+			</div>
+			<!--  -->
+			<div class="footer">
+				<div class="footer-inner">
+					<div class="copyright">
+						<span>©</span>
+						<span>2019</span>
+						<span><i class="fas fa-user"></i></span>
+						<span>黑咕咕</span>
+					</div>
+					<div class="showDays">本站已运行 0 年 0 天 0 小时 0 分钟 0 秒</div>
+				</div>
+			</div>
+			<script type="text/javascript" src="/public/js/jquery-1.11.3.js"></script>
+			<script type="text/javascript" src="/public/js/time.js"></script>
+		</div>
+	</center>
+</body>
+</html>

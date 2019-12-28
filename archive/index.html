@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+    <meta charset="utf-8">
+    <title>归档 | 黑咕咕个人博客</title> 
+    <link href="/public/images/favicon.ico" rel="icon" type="image/x-ico">
+    <link rel="stylesheet" type="text/css" href="/public/css/heiGuang.css">
+    <link rel="stylesheet" href="/public/lib/fontawesome-free-5.11.2-web/css/all.css">
+	<link rel="stylesheet" href="/public/lib/fontawesome-free-5.11.2-web/css/v4-shims.css">
+    <script src="/public/js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="/public/js/heiGuang.js"></script>
+    <script type="text/javascript" src="/public/js/run.js"></script>
+    <style type="text/css">
+    	.ui-timeLine {
+            padding: 50px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .ui-timeLine>.item {
+            display: block;
+            position: relative;
+            text-align: justify;
+            text-justify: newspaper;
+            word-break: break-all;
+            padding-left: 50px;
+            color: #000;
+            padding-right: 10px;
+        }
+        
+        .ui-timeLine>.item>.box {
+            padding: 5px 0;
+        }
+        
+        .ui-timeLine>.item .cbox {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-wrap: wrap;
+            left: 100vw;
+            transition: left 1s;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .ui-timeLine>.item .cbox:hover {
+        	box-shadow: 3px 3px 8px #ccc;
+        }
+        
+        .ui-timeLine>.item::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        
+        .ui-timeLine .dot {
+            z-index: 100;
+            display: inline-block;
+            position: absolute;
+            left: 25px;
+            top: 0;
+            padding: 3px;
+            border: 3px solid #eee;
+            border-radius: 20px;
+            background-color: #fff;
+            box-shadow: 3px 3px 8px #ccc;
+            transition: .5s;
+        }
+        
+        .ui-timeLine .active {
+            border: 3px solid rgba(132, 43, 171, .8);
+        }
+        
+        .ui-timeLine .line,
+        .ui-timeLine>.activeLine {
+            position: absolute;
+            left: 29px;
+            width: 4px;
+            height: 100%;
+            background-color: #eee;
+        }
+        
+        .ui-timeLine .date {
+        	width: 10%;
+        	display: inline-block;
+            font-size: 12px;
+            line-height: 30px;
+            height: 30px;
+            font-weight: 900;
+            font-weight: normal;
+        }
+        
+        .ui-timeLine .title ,
+        .ui-timeLine .title-all ,
+        .ui-timeLine .title-year {
+        	display: inline-block;
+        	text-align: left;
+            font-size: 16px;
+            font-weight: 900;
+            line-height: 30px;
+            font-weight: normal;
+        }
+
+        .ui-timeLine .title {
+        	width: 90%;
+        }
+
+        .ui-timeLine .title-all {
+        	width: 100%;
+        }
+
+        .ui-timeLine .title-year {
+        	width: 100%;
+            font-size: 22px;
+            line-height: 40px;
+            font-weight: 800;
+        }
+
+        .ui-timeLine .types {
+        	width: 100%;
+        	text-align: left;
+        } 
+        
+        .ui-timeLine .types>span {
+            font-size: 12px;
+            border-radius: 5px;
+            padding: 2px 10px;
+            margin-right: 10px;
+            border: 1px solid #fff;
+        }
+        
+        .ui-timeLine>.activeLine {
+            background-color: rgba(0, 200, 255, .8);
+            z-index: 50;
+            top: 50px;
+            height: 0;
+            max-height: calc(100% - 80px);
+            transition: height 1s;
+            box-shadow: 3px 3px 2px #eee;
+        }
+    </style>
+</head>
+<body>
+	<div class="loading">
+        <!-- <div class="pic">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+        </div> -->
+        <!-- <div class="loader2"></div> -->
+        <div class="loader1">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+    </div>
+    <script src="/public/js/jquery-1.11.3.js"></script>
+    <script>
+        document.onreadystatechange = function(){
+            if(document.readyState == "complete"){
+                $(".loading").fadeOut();
+            }
+        }
+    </script>
+    <div class="back-to-top">
+		<i class="fas fa-arrow-up"></i>
+		<span id="scrollpercent"><span>0</span>%</span>
+	</div>
+    <div class="progress-bar">
+    </div>
+    <script src="/public/js/jquery-1.11.3.js"></script>
+    <script>
+    	window.onscroll = function(){
+    		var scrollNow = window.pageYOffset;
+		    var pageClientHeight = document.documentElement.clientHeight;
+		    
+		    var scrollHeight = Math.max(
+		        document.body.scrollHeight, document.documentElement.scrollHeight,
+		        document.body.offsetHeight, document.documentElement.offsetHeight,
+		        document.body.clientHeight, document.documentElement.clientHeight
+		    ) - pageClientHeight; // Full Window Height minus the viewport height
+		    
+		    var fullWindowHeightInPercentage = Math.round(
+		        (scrollNow / scrollHeight) * 100 
+		    );
+		    $(".progress-bar").css('width', fullWindowHeightInPercentage + '%') ;
+		    if (fullWindowHeightInPercentage >= 2) {
+		    	$(".back-to-top").css('display', 'block');
+		    	$("#scrollpercent span").html(fullWindowHeightInPercentage);
+		    }else{
+		    	$(".back-to-top").css('display', 'none');		       
+    		}
+		}
+    </script>
+	<center>
+		<div class="center">
+			<!--  -->
+			<div class="center-box">
+				<div class="header-inner">
+					<div class="site-meta">
+						<div class="meta">
+							<p>前端开发</p>
+							<p>从没入门到放弃</p>
+						</div>
+					</div>
+					<div class="post-site-nav">
+						<ul>
+							<li><a href="/index.html"><i class="fas fa-home"></i> 首页</a></li>
+							<li><a href="/about"><i class="fas fa-user"></i>  关于</a></li>
+							<li><a href=""><i class="fas fa-tags"></i> 标签</a></li>
+							<li><a href=""><i class="fas fa-th"></i> 分类</a></li>
+							<li class="on"><a href="/archive"><i class="fas fa-archive"></i> 归档</a></li>
+						</ul>
+					</div>
+					<div class="site-item">
+						<div class="my-item">
+							<div class="my-synopsis">
+								<p>前端开发，从没入门到放弃</p>
+							</div>
+							<div class="my-img">
+								
+							</div>
+						</div>
+						<!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=200 height=50 src="https://music.163.com/outchain/player?type=2&id=412902950&auto=0&height=32"></iframe> -->
+						<div class="site-state">
+							<div class="state-posts">
+								<a href="">
+									<span class="state-count">4</span>
+									<span class="state-name">日志</span>
+								</a>
+							</div>
+							<div class="state-categories">
+								<a href="">
+									<span class="state-count">1</span>
+									<span class="state-name">分类</span>
+								</a>
+							</div>
+							<div class="state-tags">
+								<a href="">
+									<span class="state-count">1</span>
+									<span class="state-name">标签</span>
+								</a>
+							</div>
+						</div>
+						<div class="contact">
+							<ul>
+								<li title="1850779358"><i class="fab fa-qq"></i></li>
+								<li title="1850779358@qq.com"><i class="fas fa-envelope"></i></li>
+								<li title="全剧终"><i class="fab fa-weixin"></i></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<script type="text/javascript">
+				</script>
+				<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+				<label for="sidebar-checkbox" class="sidebar-toggle">
+			        <span></span>
+			    </label>
+				<div class="post-wrap">
+					<div class="post-item">
+						<div class="post-item-main">
+							<div class="ui-timeLine">
+								<a v-for="item in 1" class="item">
+					            <div class="line"></div>
+					            <div class="dot"></div>
+					            <div class="box">
+					                <div class="cbox">
+					                    <div class="title-all">目前共计4篇日志</div>
+					                </div>
+					            </div>
+					        	</a>
+						    	<div class="activeLine"></div>
+								
+								
+
+								
+								
+
+								
+							    
+							    
+							    
+							    <a v-for="item in 1" class="item">
+					            <div class="line"></div>
+					            <div class="dot"></div>
+					            <div class="box">
+					                <div class="cbox">					             
+					                    <div class="title-year">2019</div>
+					                </div>
+					            </div>
+					        	</a>
+						    	<div class="activeLine"></div>
+							    		
+							    
+					        	<a v-for="item in 1" class="item" href="/novel/2019/12/27/baiyexing.html">
+					            <div class="line"></div>
+					            <div class="dot"></div>
+					            <div class="box">
+					                <div class="cbox">
+					                    <div class="date">12-27</div>
+					                    <div class="title">白夜行</div>
+					                    <div class="types">
+					                        <span>novel</span>
+					                    </div>
+					                </div>
+					            </div>
+					        	</a>
+						    	<div class="activeLine"></div>
+						    	
+							    
+							    
+							    
+					        	<a v-for="item in 1" class="item" href="/novel/2019/12/27/xanyiren.html">
+					            <div class="line"></div>
+					            <div class="dot"></div>
+					            <div class="box">
+					                <div class="cbox">
+					                    <div class="date">12-27</div>
+					                    <div class="title">嫌疑人X的献身</div>
+					                    <div class="types">
+					                        <span>novel</span>
+					                    </div>
+					                </div>
+					            </div>
+					        	</a>
+						    	<div class="activeLine"></div>
+						    	
+							    
+							    
+							    
+					        	<a v-for="item in 1" class="item" href="/novel/2019/12/27/liuxingzhiban.html">
+					            <div class="line"></div>
+					            <div class="dot"></div>
+					            <div class="box">
+					                <div class="cbox">
+					                    <div class="date">12-27</div>
+					                    <div class="title">流星之绊</div>
+					                    <div class="types">
+					                        <span>novel</span>
+					                    </div>
+					                </div>
+					            </div>
+					        	</a>
+						    	<div class="activeLine"></div>
+						    	
+							    
+							    
+							    
+					        	<a v-for="item in 1" class="item" href="/novel/2019/12/27/eyi.html">
+					            <div class="line"></div>
+					            <div class="dot"></div>
+					            <div class="box">
+					                <div class="cbox">
+					                    <div class="date">12-27</div>
+					                    <div class="title">恶意</div>
+					                    <div class="types">
+					                        <span>novel</span>
+					                    </div>
+					                </div>
+					            </div>
+					        	</a>
+						    	<div class="activeLine"></div>
+						    	
+						    </div>
+						</div>
+						<script type="text/javascript" src="/public/js/jquery-1.11.3.js"></script>
+						<script type="text/javascript" src="/public/js/vue.js"></script>
+						<script>
+					        (function($) {
+					            $.fn.uiTimeLine = function() {
+					                var $timeLine = $(".ui-timeLine");
+					                var $activeLine = $(".ui-timeLine .activeLine");
+					                var $dots = $(".ui-timeLine .dot");
+					                var $cboxs = $(".ui-timeLine .item .cbox");
+					                return this.each(function() {
+					                    function setActiveLineHeight() {
+					                        let height = $(document).scrollTop() + window.screen.height;
+					                        let j = 0;
+					                        for (let i = 0; i < $dots.length; i++) {
+					                            if ($($dots[i]).offset().top < height) {
+					                                $($($dots[i])).addClass("active");
+					                                $($cboxs[i]).css({
+					                                    "left": 0
+					                                });
+					                                j = i;
+					                            } else {
+					                                $($($dots[i])).removeClass("active")
+					                                $($cboxs[i]).css({
+					                                    "left": "100vw"
+					                                });
+					                            }
+					                        }
+					                        $activeLine.css({
+					                            "height": $($dots[j]).offset().top - $timeLine.offset().top + 40 + "px"
+					                        })
+					                    }
+					                    $(window).on('scroll', setActiveLineHeight);
+					                    setActiveLineHeight();
+					                })
+					            }
+					        })(jQuery);
+					    </script>
+					    <script>
+					        var vue_data = new Vue({
+					            el: ".ui-timeLine",
+					            data: {
+					                 items: ["",""]
+					            },
+					            mounted: function() {
+					                $(".ui-timeLine").uiTimeLine();
+					            },
+					        });
+					    </script>
+					</div>
+				</div>
+			</div>
+			<!--  -->
+			<div class="footer">
+				<div class="footer-inner">
+					<div class="copyright">
+						<span>©</span>
+						<span>2019</span>
+						<span><i class="fas fa-user"></i></span>
+						<span>黑咕咕</span>
+					</div>
+					<div class="showDays">本站已运行 0 年 0 天 0 小时 0 分钟 0 秒</div>
+				</div>
+			</div>
+			<script type="text/javascript" src="/public/js/jquery-1.11.3.js"></script>
+			<script type="text/javascript" src="/public/js/time.js"></script>
+		</div>
+	</center>
+</body>
+</html>

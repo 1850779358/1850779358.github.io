@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+    <meta charset="utf-8">
+    <title>流星之绊 | 黑咕咕个人博客</title> 
+    <link href="/public/images/favicon.ico" rel="icon" type="image/x-ico">
+    <link rel="stylesheet" type="text/css" href="/public/css/heiGuang.css">
+    <link rel="stylesheet" href="/public/lib/fontawesome-free-5.11.2-web/css/all.css">
+	<link rel="stylesheet" href="/public/lib/fontawesome-free-5.11.2-web/css/v4-shims.css">
+    <script src="/public/js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="/public/js/heiGuang.js"></script>
+    <script type="text/javascript" src="/public/js/run.js"></script>
+</head>
+<body>
+	<div class="loading">
+        <!-- <div class="pic">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+        </div> -->
+        <!-- <div class="loader2"></div> -->
+        <div class="loader1">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+    </div>
+    <script src="/public/js/jquery-1.11.3.js"></script>
+    <script>
+        document.onreadystatechange = function(){
+            if(document.readyState == "complete"){
+                $(".loading").fadeOut();
+            }
+        }
+    </script>
+    <div class="back-to-top">
+		<i class="fas fa-arrow-up"></i>
+		<span id="scrollpercent"><span>0</span>%</span>
+	</div>
+	<div class="progress-bar">
+    </div>
+	<script src="/public/js/jquery-1.11.3.js"></script>
+    <script>
+    	window.onscroll = function(){
+    		var scrollNow = window.pageYOffset;
+		    var pageClientHeight = document.documentElement.clientHeight;
+		    
+		    var scrollHeight = Math.max(
+		        document.body.scrollHeight, document.documentElement.scrollHeight,
+		        document.body.offsetHeight, document.documentElement.offsetHeight,
+		        document.body.clientHeight, document.documentElement.clientHeight
+		    ) - pageClientHeight; // Full Window Height minus the viewport height
+		    
+		    var fullWindowHeightInPercentage = Math.round(
+		        (scrollNow / scrollHeight) * 100 
+		    );
+		    $(".progress-bar").css('width', fullWindowHeightInPercentage + '%') ;
+		    if (fullWindowHeightInPercentage >= 2) {
+		    	$(".back-to-top").css('display', 'block');
+		    	$("#scrollpercent span").html(fullWindowHeightInPercentage);
+		    }else{
+		    	$(".back-to-top").css('display', 'none');		       
+    		}
+		}
+    </script>
+	<center>
+		<div class="center">
+			<!--  -->
+			<div class="center-box">
+				<div class="header-inner">
+					<div class="site-meta">
+						<div class="meta">
+							<p>前端开发</p>
+							<p>从没入门到放弃</p>
+						</div>
+					</div>
+					<div class="post-site-nav">
+						<ul>
+							<li><a href="/index.html"><i class="fas fa-home"></i> 首页</a></li>
+							<li><a href="/about"><i class="fas fa-user"></i>  关于</a></li>
+							<li><a href=""><i class="fas fa-tags"></i> 标签</a></li>
+							<li><a href=""><i class="fas fa-th"></i> 分类</a></li>
+							<li><a href="/archive"><i class="fas fa-archive"></i> 归档</a></li>
+						</ul>
+					</div>
+					<div class="site-item">
+						<div class="my-item">
+							<div class="my-synopsis">
+								<p>前端开发，从没入门到放弃</p>
+							</div>
+							<div class="my-img">
+								
+							</div>
+						</div>
+						<!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=200 height=50 src="https://music.163.com/outchain/player?type=2&id=412902950&auto=0&height=32"></iframe> -->
+						<div class="site-state">
+							<div class="state-posts">
+								<a href="">
+									<span class="state-count">4</span>
+									<span class="state-name">日志</span>
+								</a>
+							</div>
+							<div class="state-categories">
+								<a href="">
+									<span class="state-count">1</span>
+									<span class="state-name">分类</span>
+								</a>
+							</div>
+							<div class="state-tags">
+								<a href="">
+									<span class="state-count">1</span>
+									<span class="state-name">标签</span>
+								</a>
+							</div>
+						</div>
+						<div class="contact">
+							<ul>
+								<li title="1850779358"><i class="fab fa-qq"></i></li>
+								<li title="1850779358@qq.com"><i class="fas fa-envelope"></i></li>
+								<li title="全剧终"><i class="fab fa-weixin"></i></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<script type="text/javascript">
+				</script>
+				<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+				<label for="sidebar-checkbox" class="sidebar-toggle">
+			        <span></span>
+			    </label>
+				<div class="post-wrap">
+					<div class="post-item">
+						<div class="post-item-header">
+							<h1>流星之绊</h1>
+							<div class="post-item-i"> 
+								<span>
+									<i class="fas fa-calendar-alt"></i>
+									<span>发表于</span>
+									<time>2019/12/27</time>
+								</span>
+								
+								<span>
+									<span>|</span>
+									<i class="fas fa-folder"></i>
+									<span>分类于</span>
+									<a class='folder'>novel</a>
+								</span>
+								
+								<span>
+									<span>|</span>
+									<i class="fas fa-comment"></i>
+								</span>
+							</div>
+						</div>
+						<div class="post-item-main">
+							<p>“我们三人就像流星，毫无目标地飞逝，不知将在何处燃烧殆尽。但不论何时，都会有一根纽带将我们紧密相连：一定要手刃凶手！”　　</p>
+
+<p>横须贺，雨，夜幕低垂。　　</p>
+
+<p>为看英仙座流星雨，年幼的三兄妹深夜偷偷外出，孰料父母竟惨死家中。他们的童年随之被剥夺，人生轨迹也彻底偏离常规。</p>
+
+<p>以流星之名，三兄妹立誓寻到凶手。　　</p>
+
+<p>境遇多舛的三兄妹以欺诈为生，潜走于城市的灰色地带，悲伤的回忆、酸楚的噩梦始终如影随形。14年弹指一挥间，案件追诉时效将尽，他们的苦苦寻找忽然有了惊人的发现。然而，他们赌上一切的精心计划，却横遭痛彻骨髓的命运抉择。
+<!--more--></p>
+
+							<div class="item-img">
+								<img src="/public/images/liuxing.jpg">
+							</div>
+						</div>
+						<div>
+							<ul class="post-copyright">
+								<li class="post-copyright-author"><strong>本文作者：</strong>黑咕咕</li>
+								<li class="post-copyright-link"><strong>本文链接：</strong><a href="/novel/2019/12/27/liuxingzhiban.html">http://127.0.0.1:4000/novel/2019/12/27/liuxingzhiban.html</a></li>
+								<li class="post-copyright-license"><strong>转载声明：</strong>本博客所有文章除特别声明外，均采用 
+									<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+								</li>
+							</ul>
+						</div>
+						<footer class="post-footer">
+							<div class="post-tags">							
+								
+								
+								
+								<a href="">
+									<i class="fas fa-tag"></i>
+									东野圭吾
+								</a>
+								
+								
+								
+								
+								
+							</div>
+							<div class="post-nav">
+								<div class="post-nav-next post-nav-item">
+									
+									<a href="/novel/2019/12/27/xanyiren.html">
+										<i class="fas fa-chevron-left"></i>
+										嫌疑人X的献身
+									</a>
+									
+								</div>
+								<span class="post-nav-divider"></span>
+								<div class="post-nav-prev post-nav-item">
+									
+									<a href="/novel/2019/12/27/eyi.html">
+										恶意
+										<i class="fas fa-chevron-right"></i>	
+									</a>
+									
+								</div>
+							</div>
+						</footer>
+					</div>
+				</div>
+			</div>
+			<!--  -->
+			<div class="footer">
+				<div class="footer-inner">
+					<div class="copyright">
+						<span>©</span>
+						<span>2019</span>
+						<span><i class="fas fa-user"></i></span>
+						<span>黑咕咕</span>
+					</div>
+					<div class="showDays">本站已运行 0 年 0 天 0 小时 0 分钟 0 秒</div>
+				</div>
+			</div>
+			<script type="text/javascript" src="/public/js/jquery-1.11.3.js"></script>
+			<script type="text/javascript" src="/public/js/time.js"></script>
+		</div>
+	</center>
+</body>
+</html>
