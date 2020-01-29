@@ -457,6 +457,7 @@ p {
 .content-wrap ,
 .post-wrap{
 	width: 73%;
+	min-height: 700px;
 	background-color: #fff;
 }
 
@@ -590,14 +591,27 @@ p {
 }
 
 .item-header ，
-.post-item-header {
+.post-item-header ,
+.category-item-header ,
+.tags-item-header {
 	width: 100%;
 }
 
-.post-item-header h1 {
+.post-item-header h1 ,
+.category-item-header h1 ,
+.tags-item-header h1 {
+	margin-top: 40px;
 	font-size: 28px;
 	font-family: "宋体";
 	font-weight: 500;
+}
+
+.category-all p ,
+.tags-all p{
+	margin-top: 10px;
+	width: 100%;
+	text-align: center;
+	text-indent: 0;
 }
 
 .item-header a {
@@ -670,6 +684,61 @@ p {
 .post-item-main p{
 	text-align: left;
 	line-height: 40px;
+}
+
+.category-item-main ,
+.tags-item-main {
+	margin-top: 20px;
+}
+
+.category-all-main .category-list ,
+.tags-all-main .tags-list {
+    margin: 0;
+    padding: 0;
+}
+
+.category-posts ,
+.tags-posts {
+	margin: 10px;
+}
+
+.category-list-li ,
+.tags-list-li {
+    list-style: circle;
+    text-align: left;
+    margin: 5px 10px;
+}
+
+.category-posts-li , 
+.tags-posts-li {
+	list-style: ;
+    text-align: left;
+    margin: 10px 10px;
+}
+
+.category-list-li a ,
+.tags-list-li a{
+	font-size: 18px;
+	color: #3c342d;
+    text-decoration: none;
+    outline: none;
+    word-wrap: break-word;
+}
+
+.category-posts-li a ,
+.tags-posts-li a{
+	font-size: 18px;
+	color: #3c342d;
+    text-decoration: none;
+    outline: none;
+    border-bottom: 1px solid #999;
+    word-wrap: break-word;
+}
+
+.category-list-li span ,
+.tags-list-li span{
+	font-size: 18px;
+	color: #bbb;
 }
 
 .item-main a {

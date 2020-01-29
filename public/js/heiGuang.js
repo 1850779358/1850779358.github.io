@@ -47,7 +47,7 @@ window.onload = function(){
         u.className += ' ie10_gte';
     };
     u.id=c;
-    u.style.cssText="background-color:rgb(240,240,232);position:fixed;top:0;left:0;z-index:"+s.z+";opacity:"+s.o;
+    u.style.cssText="background-color:rgb(240,240,240);position:fixed;top:0;left:0;z-index:"+s.z+";opacity:"+s.o;
     j("body")[0].appendChild(u);
     k();
     window.οnresize = k;
